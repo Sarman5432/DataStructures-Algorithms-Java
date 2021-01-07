@@ -1,4 +1,5 @@
 import linear.array.Array;
+import linear.hashtable.CustomHashTable;
 import linear.hashtable.HashTableExercises;
 import linear.linkedlist.LinkedListCustom;
 import linear.queue.ArrayQueue;
@@ -16,10 +17,10 @@ import java.util.*;
 public class Main
 {
     public static void main(String[] args) {
-        //callArray();
-        //callLinkedList();
-        //callStack();
-        //callQueues();
+        callArray();
+        callLinkedList();
+        callStack();
+        callQueues();
         callHashTables();
     }
 
@@ -256,7 +257,7 @@ public class Main
         // Map is an "INTERFACE" of <Key, Value> where HashMap is an Implementation. (Check out others like ConcurrentHashMap for multithreaded use, HashTable is Deprecated)
         // Key: Employee Number (Integer)
         // Value: Name (String)
-        /*
+
         Map<Integer, String> map = new HashMap<>();
         map.put(1, "Ross");
         map.put(2, "Bob");
@@ -286,7 +287,6 @@ public class Main
         for(int num : numbers)
             set.add(num);
         System.out.println(set);    //only unique values [1, 2, 3, 4]
-        */
 
 
         //HashTable exercises
@@ -297,10 +297,22 @@ public class Main
         //2. Find the first Repeated character in a string (Set-HashSet)
         System.out.println(hashExercise.firstRepeatedCharacter("a green apple"));
 
+        //3. Most repeated elements in array
+        int[] arr3 = {1, 2, 2, 3, 3, 3, 4};
+        System.out.println(hashExercise.mostFrequent(arr3));    //returns 3
+
+        //4. Given an array of integers, count the number of unique pairs of integers that have difference k
+        int[] arr4 = {1, 7, 5, 9, 2, 12, 3};
+        System.out.println(hashExercise.countPairsWithDiff(arr4, 2));
+
+        //5. Given an array of integers, return indices of the two numbers such that they add up to a specific target.
+        int[] arr5 = {2, 7, 11, 15};
+        System.out.println(hashExercise.twoSum(arr5, 9));
+
         /////////// HASH FUNCTIONS //////////
         // a function that gets a value and maps it to another kind of value (called Hash Value, Hash Code, digest, or just Hash)
         /*
-            - In Data structure context, a hash function maps a "key" value to an "index" value (Linear.Array.Array behind the scene)
+            - In Data structure context, a hash function maps a "key" value to an "index" value
             - used in cryptography such as password hashing (to store in database)
             - ex. map.put(1, "Sarman")   =>     items[1] = "Sarman"
             - ex2. map.put(123456, "Sarman"), but max employees (array size) of 100. Instead of wasting space we need to map values from 0 - 99 (ex. by using modulus)
@@ -340,6 +352,14 @@ public class Main
                         -formula: ( hash1(key) + [i * hash2(key)] ) % table_size
                         -PRO: fixes quadratic probings jumping/infinite loop problem, while also being good with clusters
         */
+
+        // Custom HashTable - using chaining collision handling (test using debugger)
+        CustomHashTable table = new CustomHashTable();
+        table.put(5, "A");  //0
+        table.put(6, "B");  //1
+        table.put(10, "C"); //2
+        table.remove(5);
+        System.out.println(table.get(5));
     }
 
 
