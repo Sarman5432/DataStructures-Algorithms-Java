@@ -1,3 +1,5 @@
+package linear.queue;
+
 import jdk.jshell.Snippet;
 
 import java.util.ArrayDeque;

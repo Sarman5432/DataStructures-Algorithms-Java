@@ -1,3 +1,15 @@
+import linear.array.Array;
+import linear.hashtable.HashTableExercises;
+import linear.linkedlist.LinkedListCustom;
+import linear.queue.ArrayQueue;
+import linear.queue.CustomPriorityQueue;
+import linear.queue.QueueExercise;
+import linear.queue.QueueWithTwoStacks;
+import linear.stack.MinStack;
+import linear.stack.StackExercise;
+import linear.stack.StackViaArray;
+import linear.stack.TwoStacks;
+
 import java.util.*;
 
 
@@ -226,8 +238,8 @@ public class Main
         //queueExercise.reverse();
         queueExercise.reverseK(3); // [30, 20, 10, 15]
         queueExercise.print();
-        //TODO: StackWithTwoQueues
-        //TODO: LinkedListQueue
+        //TODO: linear.stack.StackWithTwoQueues
+        //TODO: linear.linkedlist.LinkedListQueue
     }
 
     //Hash tables give us super fast look ups: using key: value pairs
@@ -288,7 +300,7 @@ public class Main
         /////////// HASH FUNCTIONS //////////
         // a function that gets a value and maps it to another kind of value (called Hash Value, Hash Code, digest, or just Hash)
         /*
-            - In Data structure context, a hash function maps a "key" value to an "index" value (Array behind the scene)
+            - In Data structure context, a hash function maps a "key" value to an "index" value (Linear.Array.Array behind the scene)
             - used in cryptography such as password hashing (to store in database)
             - ex. map.put(1, "Sarman")   =>     items[1] = "Sarman"
             - ex2. map.put(123456, "Sarman"), but max employees (array size) of 100. Instead of wasting space we need to map values from 0 - 99 (ex. by using modulus)

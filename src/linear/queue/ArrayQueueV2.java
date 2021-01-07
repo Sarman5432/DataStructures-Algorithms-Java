@@ -1,3 +1,5 @@
+package linear.queue;
+
 import java.util.Arrays;
 
 public class ArrayQueueV2 {

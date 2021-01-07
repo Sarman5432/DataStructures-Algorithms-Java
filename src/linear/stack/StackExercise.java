@@ -1,3 +1,5 @@
+package linear.stack;
+
 import java.util.*;
 
 public class StackExercise {

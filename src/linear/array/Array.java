@@ -1,3 +1,5 @@
+package linear.array;
+
 public class Array
 {
     private int count;  //number of items currently in the array
@@ -113,7 +115,7 @@ public class Array
             arrayString += "]";
             System.out.println(arrayString);
         }else{
-            System.out.println("Empty Array!");
+            System.out.println("Empty Linear.Array.Array!");
         }
 
     }

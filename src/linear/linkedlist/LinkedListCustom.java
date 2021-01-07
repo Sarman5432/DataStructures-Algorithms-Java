@@ -1,3 +1,5 @@
+package linear.linkedlist;
+
 import java.util.NoSuchElementException;
 
 public class LinkedListCustom

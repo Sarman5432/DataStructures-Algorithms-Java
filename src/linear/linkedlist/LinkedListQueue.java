@@ -1,3 +1,5 @@
+package linear.linkedlist;
+
 import java.util.ArrayList;
 public class LinkedListQueue {
     private class Node {
